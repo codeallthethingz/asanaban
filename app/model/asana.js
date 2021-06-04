@@ -67,8 +67,9 @@ const Asana = {
         self.setTimeout(Asana.syncLoop, 1000)
         self.setInterval(async () => {
             // if the queue is empty
-            // Asana.loadTasks()
-        }, 3600)
+            Asana.loadTasks()
+            console.log(Asana.tasks)
+        }, 2000)
     },
     isSectionComplete(section) {
         let name = this.getSectionAndSwimlane(section).sectionName
